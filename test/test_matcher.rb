@@ -18,6 +18,7 @@ class MatcherTest < Minitest::Test
 
     assert_equal expected, result
   end
+
   def test_ignore_surrounding_white_space_after
     expected = "Julia"
     filter = "Jul "
@@ -25,6 +26,7 @@ class MatcherTest < Minitest::Test
 
     assert_equal expected, result
   end
+
   def test_ignore_surrounding_white_space_both
     expected = "Julia"
     filter = " Jul "
@@ -33,4 +35,11 @@ class MatcherTest < Minitest::Test
     assert_equal expected, result
   end
 
+  def test_ignore_more_than_three_characters
+    expected = nil
+    filter = "Julius"
+    result = @user.filter(filter)
+
+    assert_equal expected, result
+  end
 end
