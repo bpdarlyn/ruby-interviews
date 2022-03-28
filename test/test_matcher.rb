@@ -59,9 +59,9 @@ class MatcherTest < Minitest::Test
   end
 
   def test_reject_match_on_two_characters
-    db_users = %w(Literal Li Lia Jones Jo)
+    db_users = %w(Literal Li Lia Jones)
     user = User.new(db_users)
-    expected = %w[Jo]
+    expected = []
     filter = "Jo"
     result = user.filter(filter)
 
