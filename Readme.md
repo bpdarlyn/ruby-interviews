@@ -18,6 +18,6 @@ Given a list of names in a database i.e (Julia, Li, Shonda). Users of a web appl
 - Reject mismatch on chars beyond 3 (e.g. reject Julius for Julia)
 
 
-## Run tests
+## Run tests please
 
 `rake tests`
